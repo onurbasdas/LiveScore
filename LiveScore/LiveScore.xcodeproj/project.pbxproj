@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		70FD3B931631824036161ED3 /* Pods_LiveScore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4E9A8141E23DE7C4418E86 /* Pods_LiveScore.framework */; };
+		B9A5DC8D2972E84A00E475F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9A5DC8C2972E84A00E475F6 /* GoogleService-Info.plist */; };
 		B9E411BB2972E60D00A1F05B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E411BA2972E60D00A1F05B /* AppDelegate.swift */; };
 		B9E411BD2972E60D00A1F05B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E411BC2972E60D00A1F05B /* SceneDelegate.swift */; };
 		B9E411BF2972E60D00A1F05B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E411BE2972E60D00A1F05B /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 		050F7148AB3293F6B3DD2A9C /* Pods-LiveScore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveScore.release.xcconfig"; path = "Target Support Files/Pods-LiveScore/Pods-LiveScore.release.xcconfig"; sourceTree = "<group>"; };
 		8D4E9A8141E23DE7C4418E86 /* Pods_LiveScore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveScore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B0BCB79A51E6C2FF2DE722 /* Pods-LiveScore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveScore.debug.xcconfig"; path = "Target Support Files/Pods-LiveScore/Pods-LiveScore.debug.xcconfig"; sourceTree = "<group>"; };
+		B9A5DC8C2972E84A00E475F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B9E411B72972E60D00A1F05B /* LiveScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E411BA2972E60D00A1F05B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9E411BC2972E60D00A1F05B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +50,6 @@
 				94B0BCB79A51E6C2FF2DE722 /* Pods-LiveScore.debug.xcconfig */,
 				050F7148AB3293F6B3DD2A9C /* Pods-LiveScore.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -80,6 +81,7 @@
 				B9E411C32972E60F00A1F05B /* Assets.xcassets */,
 				B9E411C52972E60F00A1F05B /* LaunchScreen.storyboard */,
 				B9E411C82972E60F00A1F05B /* Info.plist */,
+				B9A5DC8C2972E84A00E475F6 /* GoogleService-Info.plist */,
 			);
 			path = LiveScore;
 			sourceTree = "<group>";
@@ -153,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9E411C72972E60F00A1F05B /* LaunchScreen.storyboard in Resources */,
+				B9A5DC8D2972E84A00E475F6 /* GoogleService-Info.plist in Resources */,
 				B9E411C42972E60F00A1F05B /* Assets.xcassets in Resources */,
 				B9E411C22972E60D00A1F05B /* Main.storyboard in Resources */,
 			);

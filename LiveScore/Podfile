@@ -8,5 +8,8 @@ target 'LiveScore' do
   # Pods for LiveScore
 
 pod 'Alamofire'
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'GoogleSignIn'
 
 end
