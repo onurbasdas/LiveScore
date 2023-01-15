@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,21 +17,70 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCh-xy-So2">
-                                <rect key="frame" x="68" y="558" width="30" height="35"/>
+                                <rect key="frame" x="50" y="516" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0W0-an-ksx"/>
+                                    <constraint firstAttribute="width" constant="30" id="uzE-BQ-zgl"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="google.png"/>
+                                <state key="normal" backgroundImage="GoogleIcon"/>
                                 <connections>
                                     <action selector="googleSignInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SYg-Q0-ZEY"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LiveScoreBg" translatesAutoresizingMaskIntoConstraints="NO" id="rtR-a2-0eH">
+                                <rect key="frame" x="87" y="68" width="240" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can follow live scores through this application." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7w-1r-l4J">
+                                <rect key="frame" x="50" y="247" width="314" height="41"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MH2-9x-aUS">
+                                <rect key="frame" x="50" y="338" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x5R-Mc-bkN">
+                                <rect key="frame" x="50" y="402" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfQ-xs-vWR">
+                                <rect key="frame" x="50" y="456" width="314" height="40"/>
+                                <color key="tintColor" red="0.95819944140000002" green="0.74982243780000002" blue="0.41560566430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign In">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="coH-dI-LZr" kind="show" id="cqc-TV-Iy7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.51508241889999995" green="0.33003234860000003" blue="0.9647575021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eCh-xy-So2" secondAttribute="bottom" constant="269" id="WtO-fQ-5kJ"/>
-                            <constraint firstItem="eCh-xy-So2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="Ycr-VQ-7KK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eCh-xy-So2" secondAttribute="trailing" constant="316" id="hSA-UV-DdD"/>
-                            <constraint firstItem="eCh-xy-So2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="510" id="oVA-ys-m40"/>
+                            <constraint firstItem="MH2-9x-aUS" firstAttribute="top" secondItem="m7w-1r-l4J" secondAttribute="bottom" constant="50" id="343-n3-atp"/>
+                            <constraint firstItem="m7w-1r-l4J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="5Iv-vZ-3IJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m7w-1r-l4J" secondAttribute="trailing" constant="50" id="6PB-RC-Kxe"/>
+                            <constraint firstItem="rtR-a2-0eH" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.223214" id="Bn4-bJ-6LU"/>
+                            <constraint firstItem="rtR-a2-0eH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.57971" id="E50-gJ-PdZ"/>
+                            <constraint firstItem="MH2-9x-aUS" firstAttribute="leading" secondItem="m7w-1r-l4J" secondAttribute="leading" id="K0k-O7-RkT"/>
+                            <constraint firstItem="x5R-Mc-bkN" firstAttribute="trailing" secondItem="MH2-9x-aUS" secondAttribute="trailing" id="QGM-dm-GAe"/>
+                            <constraint firstItem="eCh-xy-So2" firstAttribute="leading" secondItem="x5R-Mc-bkN" secondAttribute="leading" id="bzn-e8-2Ow"/>
+                            <constraint firstItem="eCh-xy-So2" firstAttribute="top" secondItem="JfQ-xs-vWR" secondAttribute="bottom" constant="20" id="ldY-fH-0Ss"/>
+                            <constraint firstItem="m7w-1r-l4J" firstAttribute="bottom" secondItem="rtR-a2-0eH" secondAttribute="bottom" constant="20" id="m9X-yb-OXL"/>
+                            <constraint firstItem="x5R-Mc-bkN" firstAttribute="top" secondItem="MH2-9x-aUS" secondAttribute="bottom" constant="30" id="o2r-eb-ieK"/>
+                            <constraint firstItem="JfQ-xs-vWR" firstAttribute="trailing" secondItem="x5R-Mc-bkN" secondAttribute="trailing" id="oBS-UF-3TZ"/>
+                            <constraint firstItem="rtR-a2-0eH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oGh-gL-QIU"/>
+                            <constraint firstItem="MH2-9x-aUS" firstAttribute="trailing" secondItem="m7w-1r-l4J" secondAttribute="trailing" id="os1-5w-4by"/>
+                            <constraint firstItem="x5R-Mc-bkN" firstAttribute="leading" secondItem="MH2-9x-aUS" secondAttribute="leading" id="uGE-G0-Bup"/>
+                            <constraint firstItem="JfQ-xs-vWR" firstAttribute="leading" secondItem="x5R-Mc-bkN" secondAttribute="leading" id="uI6-r0-8Fs"/>
+                            <constraint firstItem="JfQ-xs-vWR" firstAttribute="top" secondItem="x5R-Mc-bkN" secondAttribute="bottom" constant="20" id="uNT-mp-1RI"/>
+                            <constraint firstItem="rtR-a2-0eH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="yk8-0a-PZw"/>
                         </constraints>
                     </view>
                     <connections>
@@ -50,11 +99,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="IZA-E5-egv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.51508241889999995" green="0.33003234860000003" blue="0.9647575021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Main" id="ch0-E4-9Ic">
                         <barButtonItem key="rightBarButtonItem" image="person.fill" catalog="system" id="M2D-HC-zDt">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" red="0.95819944140000002" green="0.74982243780000002" blue="0.41560566430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="0ei-rx-kVi" kind="show" id="F37-NG-5cz"/>
                             </connections>
@@ -65,7 +114,7 @@
             </objects>
             <point key="canvasLocation" x="1871.0144927536232" y="-27.455357142857142"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="1tU-nP-htF">
             <objects>
                 <viewController id="0ei-rx-kVi" customClass="ProfileViewController" customModule="LiveScore" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,11 +122,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="jUt-Zc-aXh"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.51508241889999995" green="0.33003234860000003" blue="0.9647575021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2vk-bQ-lmK">
-                        <barButtonItem key="rightBarButtonItem" image="power" catalog="system" id="fJ9-BL-ehs">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <navigationItem key="navigationItem" title="Profile" id="2vk-bQ-lmK">
+                        <barButtonItem key="rightBarButtonItem" id="fJ9-BL-ehs">
+                            <imageReference key="image" image="power" catalog="system" symbolScale="large" variableValue="0.0"/>
+                            <color key="tintColor" red="0.95819944140000002" green="0.74982243780000002" blue="0.41560566430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="signOutPressed:" destination="0ei-rx-kVi" id="wWq-5P-52a"/>
                             </connections>
@@ -93,10 +143,15 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="coH-dI-LZr" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ZH3-24-VLL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ntD-EC-3ZQ">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                            <color key="textColor" red="0.95819944140000002" green="0.74982243780000002" blue="0.41560566430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -108,12 +163,13 @@
             <point key="canvasLocation" x="960.86956521739137" y="-27.455357142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tl6-zJ-Sf4"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="google.png" width="18" height="18"/>
+        <image name="GoogleIcon" width="512" height="512"/>
+        <image name="LiveScoreBg" width="500" height="500"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="power" catalog="system" width="127" height="128"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
