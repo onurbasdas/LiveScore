@@ -11,7 +11,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="LiveScore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="BYZ-38-t0r" customClass="SignInViewController" customModule="LiveScore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,14 +35,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="NW3-9b-0tb" kind="presentation" identifier="toMainSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="tl6-zJ-Sf4"/>
+                        <segue destination="coH-dI-LZr" kind="presentation" identifier="toMainSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="tl6-zJ-Sf4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="114.49275362318842" y="-27.455357142857142"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Main-->
         <scene sceneID="DF0-4i-iA2">
             <objects>
                 <viewController id="NW3-9b-0tb" customClass="MainViewController" customModule="LiveScore" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,15 +52,66 @@
                         <viewLayoutGuide key="safeArea" id="IZA-E5-egv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ch0-E4-9Ic"/>
+                    <navigationItem key="navigationItem" title="Main" id="ch0-E4-9Ic">
+                        <barButtonItem key="rightBarButtonItem" image="person.fill" catalog="system" id="M2D-HC-zDt">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="0ei-rx-kVi" kind="show" id="F37-NG-5cz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6oH-CI-VJG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="-27"/>
+            <point key="canvasLocation" x="1871.0144927536232" y="-27.455357142857142"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="1tU-nP-htF">
+            <objects>
+                <viewController id="0ei-rx-kVi" customClass="ProfileViewController" customModule="LiveScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EP6-dS-eom">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jUt-Zc-aXh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2vk-bQ-lmK">
+                        <barButtonItem key="rightBarButtonItem" image="power" catalog="system" id="fJ9-BL-ehs">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="signOutPressed:" destination="0ei-rx-kVi" id="wWq-5P-52a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1l8-fb-NX9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2759" y="-27"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QOm-gC-yJX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="coH-dI-LZr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ntD-EC-3ZQ">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NW3-9b-0tb" kind="relationship" relationship="rootViewController" id="Pc0-Aw-NvR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qFD-U6-b8c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960.86956521739137" y="-27.455357142857142"/>
         </scene>
     </scenes>
     <resources>
         <image name="google.png" width="18" height="18"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="power" catalog="system" width="127" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
